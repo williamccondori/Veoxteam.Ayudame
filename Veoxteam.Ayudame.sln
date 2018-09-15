@@ -3,9 +3,101 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{27D8AA7F-2439-4E19-ACE3-2A514FDE9BFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraestructure", "{BB397539-1AC2-43A5-8461-CCDC074AD515}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{4EC5A068-0C79-4D00-95FD-9400A50B0EEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{2304DD8E-E9B6-4B5E-B396-065432156AFF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{930EA2B6-15B4-4481-8422-09DF6BB6C838}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distributed Systems", "Distributed Systems", "{AE0626E9-11DB-491D-9A9D-489A71366F0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.Application.Services", "Veoxteam.Application.Services\Veoxteam.Application.Services.csproj", "{C59A4E9B-E640-4846-9487-CBCC9156B78C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.Application.Services.Implementation", "Veoxteam.Application.Services.Implementation\Veoxteam.Application.Services.Implementation.csproj", "{8C6BF939-E7C6-436B-BD11-4F3D86FE6967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.Application.Dtos", "Veoxteam.Application.Dtos\Veoxteam.Application.Dtos.csproj", "{9CB2AF91-94D7-4715-9D36-5D676D720F52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.DistributedSystems.DialogFlow", "Veoxteam.DistributedSystems.DialogFlow\Veoxteam.DistributedSystems.DialogFlow.csproj", "{D04316EB-576E-4B15-9D38-F82D85B7A48D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distribution", "Distribution", "{F8E9303A-9E92-4D92-AA60-227FA32B7C1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.DistributedSystems.DialogFlow.Test", "Veoxteam.DistributedSystems.DialogFlow.Test\Veoxteam.DistributedSystems.DialogFlow.Test.csproj", "{4ADF503A-E3D5-4A91-A066-2EC57B05747F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veoxteam.Domain.Entities", "Veoxteam.Domain.Entities\Veoxteam.Domain.Entities.csproj", "{D0CDDD4E-D7A7-42E1-9E5A-4ED195C84027}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Veoxteam.Domain.Repositories", "Veoxteam.Domain.Repositories\Veoxteam.Domain.Repositories.csproj", "{161DED0A-08DF-41DE-B93B-A5A4DA92ABC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.Distribution.Botservice", "Veoxteam.Distribution.Botservice\Veoxteam.Distribution.Botservice.csproj", "{7F793154-C824-4DE2-89A1-BCE4D9C5906E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.Presentation.ManagementSystem", "Veoxteam.Presentation.ManagementSystem\Veoxteam.Presentation.ManagementSystem.csproj", "{231CC74A-9E12-4BC6-9460-2E948E368691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Veoxteam.Infraestructure.Data", "Veoxteam.Infraestructure.Data\Veoxteam.Infraestructure.Data.csproj", "{F8DE222D-851C-47AF-AD0D-C3544569151E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C59A4E9B-E640-4846-9487-CBCC9156B78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59A4E9B-E640-4846-9487-CBCC9156B78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59A4E9B-E640-4846-9487-CBCC9156B78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59A4E9B-E640-4846-9487-CBCC9156B78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C6BF939-E7C6-436B-BD11-4F3D86FE6967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C6BF939-E7C6-436B-BD11-4F3D86FE6967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C6BF939-E7C6-436B-BD11-4F3D86FE6967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C6BF939-E7C6-436B-BD11-4F3D86FE6967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CB2AF91-94D7-4715-9D36-5D676D720F52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CB2AF91-94D7-4715-9D36-5D676D720F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CB2AF91-94D7-4715-9D36-5D676D720F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CB2AF91-94D7-4715-9D36-5D676D720F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04316EB-576E-4B15-9D38-F82D85B7A48D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04316EB-576E-4B15-9D38-F82D85B7A48D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04316EB-576E-4B15-9D38-F82D85B7A48D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04316EB-576E-4B15-9D38-F82D85B7A48D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ADF503A-E3D5-4A91-A066-2EC57B05747F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ADF503A-E3D5-4A91-A066-2EC57B05747F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ADF503A-E3D5-4A91-A066-2EC57B05747F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ADF503A-E3D5-4A91-A066-2EC57B05747F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0CDDD4E-D7A7-42E1-9E5A-4ED195C84027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CDDD4E-D7A7-42E1-9E5A-4ED195C84027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CDDD4E-D7A7-42E1-9E5A-4ED195C84027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CDDD4E-D7A7-42E1-9E5A-4ED195C84027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161DED0A-08DF-41DE-B93B-A5A4DA92ABC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161DED0A-08DF-41DE-B93B-A5A4DA92ABC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161DED0A-08DF-41DE-B93B-A5A4DA92ABC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161DED0A-08DF-41DE-B93B-A5A4DA92ABC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F793154-C824-4DE2-89A1-BCE4D9C5906E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F793154-C824-4DE2-89A1-BCE4D9C5906E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F793154-C824-4DE2-89A1-BCE4D9C5906E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F793154-C824-4DE2-89A1-BCE4D9C5906E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{231CC74A-9E12-4BC6-9460-2E948E368691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{231CC74A-9E12-4BC6-9460-2E948E368691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{231CC74A-9E12-4BC6-9460-2E948E368691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{231CC74A-9E12-4BC6-9460-2E948E368691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8DE222D-851C-47AF-AD0D-C3544569151E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8DE222D-851C-47AF-AD0D-C3544569151E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8DE222D-851C-47AF-AD0D-C3544569151E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8DE222D-851C-47AF-AD0D-C3544569151E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C59A4E9B-E640-4846-9487-CBCC9156B78C} = {2304DD8E-E9B6-4B5E-B396-065432156AFF}
+		{8C6BF939-E7C6-436B-BD11-4F3D86FE6967} = {2304DD8E-E9B6-4B5E-B396-065432156AFF}
+		{9CB2AF91-94D7-4715-9D36-5D676D720F52} = {2304DD8E-E9B6-4B5E-B396-065432156AFF}
+		{D04316EB-576E-4B15-9D38-F82D85B7A48D} = {AE0626E9-11DB-491D-9A9D-489A71366F0E}
+		{4ADF503A-E3D5-4A91-A066-2EC57B05747F} = {AE0626E9-11DB-491D-9A9D-489A71366F0E}
+		{D0CDDD4E-D7A7-42E1-9E5A-4ED195C84027} = {930EA2B6-15B4-4481-8422-09DF6BB6C838}
+		{161DED0A-08DF-41DE-B93B-A5A4DA92ABC3} = {930EA2B6-15B4-4481-8422-09DF6BB6C838}
+		{7F793154-C824-4DE2-89A1-BCE4D9C5906E} = {F8E9303A-9E92-4D92-AA60-227FA32B7C1A}
+		{231CC74A-9E12-4BC6-9460-2E948E368691} = {27D8AA7F-2439-4E19-ACE3-2A514FDE9BFB}
+		{F8DE222D-851C-47AF-AD0D-C3544569151E} = {BB397539-1AC2-43A5-8461-CCDC074AD515}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {154F7D1F-2A90-48F4-AF7A-3A30FE807E39}
