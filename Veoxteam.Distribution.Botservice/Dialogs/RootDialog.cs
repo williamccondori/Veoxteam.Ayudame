@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Veoxteam.DistributedSystems.DialogFlow;
 using Veoxteam.DistributedSystems.DialogFlow.Models;
 using Veoxteam.Distribution.Botservice.Dialogs.DialogFlow;
+using Veoxteam.Distribution.Botservice.Dialogs.DialogFlow.Reporte;
 using Veoxteam.Distribution.Botservice.Dialogs.DialogFlow.Urgencia;
 using Veoxteam.Distribution.Botservice.Intents;
 
@@ -55,7 +56,7 @@ namespace Veoxteam.Distribution.Botservice.Dialogs
 
         private async Task Agradecer(IDialogContext context, string message)
         {
-            await Empezar(() => StartDialog(context, new AgradecerDialog(message)));
+            await Empezar(() => StartDialog(context, new FacebookLocationDialog()));
         }
 
         // Urgencia

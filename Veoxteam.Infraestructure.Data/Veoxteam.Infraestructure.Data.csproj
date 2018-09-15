@@ -61,5 +61,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Veoxteam.Domain.Entities\Veoxteam.Domain.Entities.csproj">
+      <Project>{3DFE211F-7E83-4623-94EF-5D9C29562456}</Project>
+      <Name>Veoxteam.Domain.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

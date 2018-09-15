@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Veoxteam.Domain.Entities;
 using Veoxteam.Infraestructure.Data.Shared;
 
 namespace Veoxteam.Infraestructure.Data.Contexts
@@ -10,7 +11,9 @@ namespace Veoxteam.Infraestructure.Data.Contexts
         {
             //Database.SetInitializer<BotContext>(null);
         }
-        //public DbSet<AdjuntoEntity> Adjunto { get; set; }
+
+        public DbSet<ReportTypeEntity> ReportType { get; set; }
+        public DbSet<ReportEntity> Report { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

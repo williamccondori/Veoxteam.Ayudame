@@ -157,6 +157,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Dialogs\DialogFlow\AgradecerDialog.cs" />
+    <Compile Include="Dialogs\DialogFlow\Reporte\FacebookLocationDialog.cs" />
     <Compile Include="Dialogs\DialogFlow\Urgencia\BebeAtragantadoDialog.cs" />
     <Compile Include="Dialogs\DialogFlow\Urgencia\FracturaDialog.cs" />
     <Compile Include="Dialogs\DialogFlow\Urgencia\MordeduraPicaduraDialog.cs" />
@@ -188,6 +189,9 @@
       <Project>{d04316eb-576e-4b15-9d38-f82d85b7a48d}</Project>
       <Name>Veoxteam.DistributedSystems.DialogFlow</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

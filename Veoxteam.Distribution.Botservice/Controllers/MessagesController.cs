@@ -1,5 +1,6 @@
 ﻿using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -16,16 +17,54 @@ namespace Veoxteam.Distribution.Botservice
         /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
-            if (activity.GetActivityType() == ActivityTypes.Message)
+            try
             {
-                await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
+
+                if (activity.Type == ActivityTypes.Message)
+                {
+                    ConnectorClient conector = new ConnectorClient(new Uri(activity.ServiceUrl));
+
+                    Activity actividadTyping = activity.CreateReply();
+                    actividadTyping.Type = ActivityTypes.Typing;
+                    await conector.Conversations.ReplyToActivityAsync(actividadTyping);
+
+                    activity.Text = string.IsNullOrEmpty(activity.Text) ? "0" : activity.Text;
+
+                    //ClienteDto cliente = new ClienteDto
+                    //{
+                    //    CodigoCliente = actividad.From.Id,
+                    //    DescripcionNombre = actividad.From.Name,
+                    //    DescripcionConversacion = actividad.Conversation.Id,
+                    //    DescripcionMetadata = JsonConvert.SerializeObject(actividad),
+                    //    DescripcionCanal = actividad.ChannelId,
+                    //    Estado = EstadoObjeto.Nuevo
+                    //};
+
+                    //ClienteProxy proxyCliente = new ClienteProxy(VariableConfiguracion.RutaApi());
+
+                    //proxyCliente.Guardar(cliente);
+
+                    await Conversation.SendAsync(activity, () => new Dialogs.RootDialog());
+                }
+                else
+                {
+                    HandleSystemMessage(activity);
+                }
+
+                return Request.CreateResponse(HttpStatusCode.OK);
             }
-            else
+            catch (Exception excepcion)
             {
-                HandleSystemMessage(activity);
+                ConnectorClient conector = new ConnectorClient(new Uri(activity.ServiceUrl));
+
+                Activity nuevaActividad = activity.CreateReply(excepcion.Message);
+
+                nuevaActividad.Type = ActivityTypes.Message;
+
+                await conector.Conversations.ReplyToActivityAsync(nuevaActividad);
+
+                return Request.CreateResponse(HttpStatusCode.OK);
             }
-            var response = Request.CreateResponse(HttpStatusCode.OK);
-            return response;
         }
 
         private Activity HandleSystemMessage(Activity message)
