@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace Veoxteam.Distribution.Botservice.Dialogs.DialogFlow.Urgencia
 {
     [Serializable]
-    public class BebeAtragantadoDialog : IDialog<object>
+    public class MordeduraPicaduraDialog : IDialog<object>
     {
         private string _message;
 
-        public BebeAtragantadoDialog(string message)
+        public MordeduraPicaduraDialog(string message)
         {
             _message = message;
         }
@@ -27,7 +27,7 @@ namespace Veoxteam.Distribution.Botservice.Dialogs.DialogFlow.Urgencia
 
             activity.Attachments.Add(new Attachment()
             {
-                ContentUrl = "https://pbs.twimg.com/media/DUvLBEIVAAArB_e.jpg",
+                ContentUrl = "http://ayudame.azurewebsites.net/images/mordedura_picadura.png",
                 ContentType = "image/jpg"
             });
 

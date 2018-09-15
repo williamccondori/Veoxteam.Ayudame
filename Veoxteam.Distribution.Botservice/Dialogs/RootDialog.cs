@@ -29,8 +29,13 @@ namespace Veoxteam.Distribution.Botservice.Dialogs
                     await Predeterminado(context, intent.Message); break;
                 case Intent.GeneralSaludar:
                     await Saludar(context, intent.Message); break;
+                case Intent.GeneralAgradecer:
+                    await Agradecer(context, intent.Message); break;
 
-
+                case Intent.UrgenciaMordeduraPicadura:
+                    await MordeduraPicadura(context, intent.Message); break;
+                case Intent.UrgenciaFractura:
+                    await Fractura(context, intent.Message); break;
                 case Intent.UrgenciaBebeAtragantado:
                     await BebeAtragantado(context, intent.Message); break;
                 default:
@@ -48,11 +53,26 @@ namespace Veoxteam.Distribution.Botservice.Dialogs
             await Empezar(() => StartDialog(context, new SaludarDialog(message)));
         }
 
+        private async Task Agradecer(IDialogContext context, string message)
+        {
+            await Empezar(() => StartDialog(context, new AgradecerDialog(message)));
+        }
+
         // Urgencia
 
         private async Task BebeAtragantado(IDialogContext context, string message)
         {
             await Empezar(() => StartDialog(context, new BebeAtragantadoDialog(message)));
+        }
+
+        private async Task MordeduraPicadura(IDialogContext context, string message)
+        {
+            await Empezar(() => StartDialog(context, new MordeduraPicaduraDialog(message)));
+        }
+
+        private async Task Fractura(IDialogContext context, string message)
+        {
+            await Empezar(() => StartDialog(context, new FracturaDialog(message)));
         }
     }
 }

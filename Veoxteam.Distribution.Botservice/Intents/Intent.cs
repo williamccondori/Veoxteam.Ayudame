@@ -9,5 +9,7 @@ namespace Veoxteam.Distribution.Botservice.Intents
         public const string GeneralAgradecer = "general.agradecer";
         public const string GeneralSaludar = "general.saludar";
         public const string UrgenciaBebeAtragantado = "urgencia.bebeatragantado";
+        public const string UrgenciaFractura = "urgencia.fractura";
+        public const string UrgenciaMordeduraPicadura = "urgencia.mordedurapicadura";
     }
 }
